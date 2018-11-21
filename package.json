@@ -7,11 +7,13 @@
     "alltest": "./node_modules/.bin/newman run postman/PetStoreCollection.postman_collection.json",
     "pettest": "./node_modules/.bin/newman run postman/PetStoreCollection.postman_collection.json --folder pet",
     "storetest": "./node_modules/.bin/newman run postman/PetStoreCollection.postman_collection.json --folder store",
-    "usertest": "./node_modules/.bin/newman run postman/PetStoreCollection.postman_collection.json --folder user"
+    "usertest": "./node_modules/.bin/newman run postman/PetStoreCollection.postman_collection.json --folder user",
+    "cyrun":"./node_modules/.bin/cypress open"
   },
   "author": "Carlos Buelvas",
   "license": "ISC",
   "dependencies": {
+    "cypress": "^3.1.2",
     "newman": "^4.2.2"
   }
 }
