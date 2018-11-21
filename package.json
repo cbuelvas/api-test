@@ -1,0 +1,17 @@
+{
+  "name": "api-test",
+  "version": "1.0.0",
+  "description": "API testing using postman",
+  "main": "index.js",
+  "scripts": {
+    "alltest": "./node_modules/.bin/newman run postman/PetStoreCollection.postman_collection.json",
+    "pettest": "./node_modules/.bin/newman run postman/PetStoreCollection.postman_collection.json --folder pet",
+    "storetest": "./node_modules/.bin/newman run postman/PetStoreCollection.postman_collection.json --folder store",
+    "usertest": "./node_modules/.bin/newman run postman/PetStoreCollection.postman_collection.json --folder user"
+  },
+  "author": "Carlos Buelvas",
+  "license": "ISC",
+  "dependencies": {
+    "newman": "^4.2.2"
+  }
+}
