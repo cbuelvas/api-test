@@ -23,3 +23,4 @@
 //
 // -- This is will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
+// Performs an XMLHttpRequest instead of a cy.request (able to send data as FormData - multipart/form-data)

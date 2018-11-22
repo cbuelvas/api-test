@@ -6,14 +6,14 @@
 Clone the repo and install dependencies
 
 ```sh
-$ cd api-test && npm install
+cd api-test && npm install
 ```
 
 Once installed, you can run the test in two ways, all in one, or per collection
 
 To run all the test at once sun:
 ```sh
-$ npm run petstore
+npm run petstore
 ```
 Tests:
 - pet_ideal : ideal behavior of the API
@@ -25,19 +25,19 @@ Tests:
 
 To run each set of tests run: 
 ```sh
-$ npm run pet:ideal
-$ npm run pet:mv
-$ npm run pet:wv
-$ npm run pet:ls
-$ npm run storetest
-$ npm run usertest
+npm run pet:ideal
+npm run pet:mv
+npm run pet:wv
+npm run pet:ls
+npm run storetest
+npm run usertest
 ```
 
 ## API-test with cypress
 
 To run the test using cypress run:
 ```sh
-$ npm run cyrun
+npm run cyrun
 ```
 
 #### work in progress
