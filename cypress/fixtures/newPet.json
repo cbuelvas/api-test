@@ -1,16 +1,16 @@
 {
   "id": 6666,
   "category": {
-    "id": 8,
-    "name": "cytest"
+    "id": 0,
+    "name": "test"
   },
-  "name": "Cypet",
+  "name": "NewCyName",
   "photoUrls": [
-    "none"
+    ""
   ],
   "tags": [
     {
-      "id": 5,
+      "id": 0,
       "name": "cytest"
     }
   ],

@@ -3,10 +3,10 @@ describe('Ideal usage of the pet API calls', () => {
 
   it('Creates a new pet in the store', () => {
     cy.request({
-      method: 'POST',
-      url: 'pet',
-      failOnStatusCode: true,
-      body: {
+        method: 'POST',
+        url: 'pet',
+        failOnStatusCode: true,
+        body: {
           "id": 6666,
           "category": {
             "id": 8,
@@ -16,20 +16,18 @@ describe('Ideal usage of the pet API calls', () => {
           "photoUrls": [
             "none"
           ],
-          "tags": [
-            {
-              "id": 5,
-              "name": "cytest"
-            }
-          ],
+          "tags": [{
+            "id": 5,
+            "name": "cytest"
+          }],
           "status": "available"
-      }
-    })
-    .then((response) => {
-      cy.writeFile('cypress/fixtures/newPet.json', response.body)
-    })
+        }
+      })
+      .then((response) => {
+        cy.writeFile('cypress/fixtures/newPet.json', response.body)
+      })
     cy.readFile('cypress/fixtures/newPet.json')
-    .its('id').should('eq',6666)
+      .its('id').should('eq', 6666)
   })
 
   it('Updates a pet in the store', () => {
@@ -38,22 +36,20 @@ describe('Ideal usage of the pet API calls', () => {
       url: 'pet',
       failOnStatusCode: true,
       body: {
-          "id": 6666,
-          "category": {
-            "id": 0,
-            "name": "test"
-          },
-          "name": "NewCyName",
-          "photoUrls": [
-            ""
-          ],
-          "tags": [
-            {
-              "id": 0,
-              "name": "cytest"
-            }
-          ],
-          "status": "available"
+        "id": 6666,
+        "category": {
+          "id": 0,
+          "name": "test"
+        },
+        "name": "NewCyName",
+        "photoUrls": [
+          ""
+        ],
+        "tags": [{
+          "id": 0,
+          "name": "cytest"
+        }],
+        "status": "available"
       }
     })
   })
@@ -86,11 +82,11 @@ describe('Ideal usage of the pet API calls', () => {
     })
   })
 
-  it('Update pet object with form data', () =>{
+  it('Update pet object with form data', () => {
     cy.request({
       method: 'POST',
-      url: '/pet/6666', 
-      form: true, 
+      url: '/pet/6666',
+      form: true,
       body: {
         petId: 6666,
         name: 'CyformName',
@@ -107,7 +103,7 @@ describe('Ideal usage of the pet API calls', () => {
   })
 
   it('Delete the pet object', () => {
-    cy.request('DELETE','pet/6666','failOnStatusCode')
+    cy.request('DELETE', 'pet/6666', 'failOnStatusCode')
   })
 
 })

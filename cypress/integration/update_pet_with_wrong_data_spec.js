@@ -30,10 +30,9 @@ describe('Update pet data with diferent values', () => {
     })
 
     it('Update pet object with form data', () => {
-        cy.fixture('newPet.json').as('pet')
         cy.request({
             method: 'POST',
-            url: 'pet/',
+            url: 'pet/6666',
             form: true,
             body: {
                 petId: 6666,
