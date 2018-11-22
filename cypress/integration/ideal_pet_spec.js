@@ -9,22 +9,27 @@ describe('Ideal usage of the pet API calls', () => {
       body: {
           "id": 6666,
           "category": {
-            "id": 0,
-            "name": "test"
+            "id": 8,
+            "name": "cytest"
           },
           "name": "Cypet",
           "photoUrls": [
-            ""
+            "none"
           ],
           "tags": [
             {
-              "id": 0,
+              "id": 5,
               "name": "cytest"
             }
           ],
           "status": "available"
       }
     })
+    .then((response) => {
+      cy.writeFile('cypress/fixtures/newPet.json', response.body)
+    })
+    cy.readFile('cypress/fixtures/newPet.json')
+    .its('id').should('eq',6666)
   })
 
   it('Updates a pet in the store', () => {
@@ -57,18 +62,27 @@ describe('Ideal usage of the pet API calls', () => {
     // Available values : available, pending, sold
     cy.request({
       method: 'GET',
-      url: '/pet/findByStatus?status=available',
-      failOnStatusCode: true
+      url: '/pet/findByStatus',
+      failOnStatusCode: true,
+      qs: {
+        status: 'available'
+      },
     })
     cy.request({
       method: 'GET',
-      url: '/pet/findByStatus?status=pending',
-      failOnStatusCode: true
+      url: '/pet/findByStatus',
+      failOnStatusCode: true,
+      qs: {
+        status: 'pending'
+      },
     })
     cy.request({
       method: 'GET',
-      url: '/pet/findByStatus?status=sold',
-      failOnStatusCode: true
+      url: '/pet/findByStatus',
+      failOnStatusCode: true,
+      qs: {
+        status: 'sold'
+      },
     })
   })
 

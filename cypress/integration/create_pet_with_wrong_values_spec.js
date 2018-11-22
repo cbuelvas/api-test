@@ -2,10 +2,11 @@
 describe('Create a pet using the API with missing data', () => {
 
     it('Create a new pet in the store with missing fields', () => {
+      /** it creates teh pet no mather what, it returns an pet 
+       * object with id (random generated?) field that is missing */
       cy.request({
         method: 'POST',
         url: 'pet',
-        failOnStatusCode: true,
         body: {
             "category": {
               "id": 0,
@@ -20,5 +21,6 @@ describe('Create a pet using the API with missing data', () => {
             ],
         }
       })
+      .its('status').should('eq', 200)
     })
   })

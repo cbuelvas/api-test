@@ -1,0 +1,18 @@
+{
+  "id": 6666,
+  "category": {
+    "id": 8,
+    "name": "cytest"
+  },
+  "name": "Cypet",
+  "photoUrls": [
+    "none"
+  ],
+  "tags": [
+    {
+      "id": 5,
+      "name": "cytest"
+    }
+  ],
+  "status": "available"
+}

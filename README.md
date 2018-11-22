@@ -9,7 +9,7 @@ Clone the repo and install dependencies
 $ cd api-test && npm install
 ```
 
-Once installed, you can run the test in two ways, all in one, or per collection [pet, store, user]
+Once installed, you can run the test in two ways, all in one, or per collection
 
 To run all the test at once sun:
 ```sh
@@ -40,4 +40,4 @@ To run the test using cypress run:
 $ npm run cyrun
 ```
 
-####work in progress
+#### work in progress
