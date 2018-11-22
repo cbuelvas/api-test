@@ -4,11 +4,14 @@
   "description": "API testing using postman",
   "main": "index.js",
   "scripts": {
-    "alltest": "./node_modules/.bin/newman run postman/PetStoreCollection.postman_collection.json",
-    "pettest": "./node_modules/.bin/newman run postman/PetStoreCollection.postman_collection.json --folder pet",
-    "storetest": "./node_modules/.bin/newman run postman/PetStoreCollection.postman_collection.json --folder store",
-    "usertest": "./node_modules/.bin/newman run postman/PetStoreCollection.postman_collection.json --folder user",
-    "cyrun":"./node_modules/.bin/cypress open"
+      "petstore": "./node_modules/.bin/newman run postman/PetStoreC.json",
+      "pet:ideal": "./node_modules/.bin/newman run postman/PetStoreC.json --folder pet_ideal",
+      "pet:mv": "./node_modules/.bin/newman run postman/PetStoreC.json --folder missingValuesCreation",
+      "pet:wv": "./node_modules/.bin/newman run postman/PetStoreC.json --folder updateWrongValues",
+      "pet:ls": "./node_modules/.bin/newman run postman/PetStoreC.json --folder listPets",
+      "storetest": "./node_modules/.bin/newman run postman/PetStoreC.json --folder store",
+      "usertest": "./node_modules/.bin/newman run postman/PetStoreC.json --folder user",
+      "cyrun":"./node_modules/.bin/cypress open"
   },
   "author": "Carlos Buelvas",
   "license": "ISC",
