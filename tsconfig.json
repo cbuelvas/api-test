@@ -1,0 +1,28 @@
+{
+    "compilerOptions": {
+        "alwaysStrict": true,
+        "baseUrl": ".",
+        "downlevelIteration": true,
+        "forceConsistentCasingInFileNames": true,
+        "isolatedModules": false,
+        "lib":["es2015", "es2017"],
+        "module": "commonjs",
+        "moduleResolution": "node",    
+        "outDir": "./built",
+        "allowJs": true,
+        "target": "es6",
+        "preserveConstEnums": true,
+        "pretty": true,
+        "removeComments": true,
+        "sourceMap": true,
+    
+    },
+    "typeRoots": [
+        // add path to @types
+        "node_modules/@types"
+      ],
+    "exclude": ["node_modules"],
+    "include": [
+        "./cypress/**/*"
+    ]
+}
